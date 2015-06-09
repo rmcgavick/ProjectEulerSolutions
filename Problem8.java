@@ -1,6 +1,6 @@
 
-// Works! The problem was that I was using an int, which isn't big enough
-// to store the actual value of this number. Changed to
+// Works! I was having a problem because I was using an int, which isn't big enough
+// to store the actual value of this number. Changed to long and it works.
 
 public class Problem8 {
 
