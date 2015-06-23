@@ -63,15 +63,13 @@ public class Problem11 {
 	}
 	
 	// again, n assumes n X n grid
-	public static String printArrayIntoGrid(GridObj[][] arr, int n) {
-		String newGrid = "";
+	public static void printArrayIntoGrid(GridObj[][] arr, int n) {
 		for(int i = 0; i < n; i++) {
 			for(int j = 0; j < n; j++) {
 				System.out.printf("%02d  ", arr[i][j].getVal());
 			}
 			System.out.println();
 		}
-		return newGrid;
 	}
 	
 	// here is the method that takes a number x and a 2d array of GridObj's
@@ -257,7 +255,7 @@ public class Problem11 {
 	
 	public static void main(String[] args) {
 		gridArray = fillArrayFromGrid(grid, n);
-		System.out.print(printArrayIntoGrid(gridArray, n));
+		printArrayIntoGrid(gridArray, n);
 		System.out.println(solve());
 		
 		// print how long the program took to finish
