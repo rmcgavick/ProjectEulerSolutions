@@ -32,9 +32,12 @@ public class Problem12 {
 	static int triangleNumDivisors = 0;
 	static int solution = 0;
 	
+	// this method goes through each triangle number and calls findivisors()
+	// method on each one
 	public static void populateTriangleNums() { 
 		int n = 0;
 		int numDivisors = 0;
+		// need to find the FIRST triangle number that has >500 divisors
 		for(int i=1, j=1; numDivisors < 502; i++) {
 			n = 1;
 			j = i;
@@ -49,7 +52,12 @@ public class Problem12 {
 		triangleNumDivisors = numDivisors;
 	}
 	
+		// this method finds all the divisors for a given number n
+		
 		public static int findDivisors(int n) {
+		// start by adding two numbers to the total divisors count
+		// (1 and the number n), because this for loop doesn't account
+		// for those two numbers
 		int divisors = 2;
 		
 		for(int i = 2; i <= (int) n/2; i++) {
