@@ -14,15 +14,15 @@ It can be seen that this sequence (starting at 13 and finishing at 1) contains 1
 Which starting number, under one million, produces the longest chain?
 
 NOTE: Once the chain starts the terms are allowed to go above one million.
- */
 
-// V1 notes: This program works, and very fast, but apparently doesn't find the right answer.
-// The solution this program finds is that the number 910107 produces the longest chain, which
-// is 476 numbers long. This number seems too low...
+V1 notes: This program works, and very fast, but apparently doesn't find the right answer.
+The solution this program finds is that the number 910107 produces the longest chain, which
+is 476 numbers long. This number seems too low...
 
-// V2: Solved. Once again, the issue was that the min value of int was too low to handle some of the numbers
-// in the sequence. Changed the collatzSequence() method to take and return a long instead of an int, and
-// problem solved. This program runs in about 3 seconds.
+V2: Solved. Once again, the issue was that the min value of int was too low to handle some of the numbers
+in the sequence. Changed the collatzSequence() method to take and return a long instead of an int, and
+problem solved. This program runs in about 3 seconds.
+*/
 
 public class Problem14 {
 
