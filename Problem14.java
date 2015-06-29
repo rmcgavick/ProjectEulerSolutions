@@ -16,18 +16,22 @@ Which starting number, under one million, produces the longest chain?
 NOTE: Once the chain starts the terms are allowed to go above one million.
  */
 
-// My notes: This program works, and very fast, but apparently doesn't find the right answer.
+// V1 notes: This program works, and very fast, but apparently doesn't find the right answer.
 // The solution this program finds is that the number 910107 produces the longest chain, which
 // is 476 numbers long. This number seems too low...
+
+// V2: Solved. Once again, the issue was that the min value of int was too low to handle some of the numbers
+// in the sequence. Changed the collatzSequence() method to take and return a long instead of an int, and
+// problem solved. This program runs in about 3 seconds.
 
 public class Problem14 {
 
 	static int solution = 0;
-	static int longestSequence = 0;
+	static int longSequence = 0;
 	static long startTime = System.nanoTime();
 	
 	public static int findLongestSequence() {
-		int currentNum = 0;
+		long currentNum = 0;
 		int longestSequence = 0;
 		
 		for(int i = 2; i < 1000001; i++) {
@@ -44,11 +48,12 @@ public class Problem14 {
 				longestSequence = sequenceLength;
 				solution = i;
 			}
+			//System.out.println(sequenceLength + ", " + longestSequence);
 		}
 		return longestSequence;
 	}
 	
-	public static int collatzSequence(int n) {
+	public static long collatzSequence(long n) {
 		if (n == 1)
 			return 1;
 		else if (n % 2 == 0)
@@ -58,8 +63,8 @@ public class Problem14 {
 	}
 	
 	public static void main(String[] args) {
-		longestSequence = findLongestSequence();
-		System.out.println("Starting number that produces the longest chain is " + solution + ", \nwith a sequence length of " + longestSequence);
+		longSequence = findLongestSequence();
+		System.out.println("Starting number that produces the longest chain is " + solution + ", \nwith a sequence length of " + longSequence);
 		
 		long endTime = System.nanoTime();
 		System.out.println("\nTook "+ ((endTime - startTime) / 1000000000.0) + " seconds");
