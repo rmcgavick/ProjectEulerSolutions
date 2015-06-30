@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-// This prog solves the problem, but takes a long time to do so (~20 minutes)
-=======
 // This prog solves the problem brute force, but takes a long time to do so (~20 minutes)
->>>>>>> 73bc1fa2f56ca169961cb7c6538b02d0a87cca8c
+
 
 import java.util.ArrayList;
 import java.util.List;
