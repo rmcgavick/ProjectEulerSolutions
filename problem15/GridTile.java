@@ -29,6 +29,10 @@ public class GridTile {
 		return idNum;
 	}
 	
+	public boolean isVisited() { // -- need to rename
+		return visitedFlag;
+	}
+	
 	public boolean isVertEdge() {
 		return isVertEdge;
 	}
@@ -37,7 +41,7 @@ public class GridTile {
 		return isHorzEdge;
 	}
 	
-	public void tileVisited(boolean b) {
+	public void tileVisited(boolean b) { // -- need to rename
 		visitedFlag = b;
 	}
 	
