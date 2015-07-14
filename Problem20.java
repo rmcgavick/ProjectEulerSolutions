@@ -10,6 +10,13 @@ import java.math.BigInteger;
  * Find the sum of the digits in the number 100!
  */
 
+/*
+ * My Notes:
+ * This was another program that was made easy by using the BigInteger class.
+ * the max value of a long is too small to hold this number, but BigInteger
+ * worked. 
+ */
+
 public class Problem20 {
 
 	private static BigInteger findFactorialSum(int num) {
