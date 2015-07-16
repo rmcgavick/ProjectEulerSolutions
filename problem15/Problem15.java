@@ -78,7 +78,7 @@ public class Problem15 {
 			for(numMoves = 0; currentTileID < endTileID; numMoves++) {
 				if(tiles.moveRight(currentTile) != null) {
 					currentTile = tiles.moveRight(currentTile);
-					System.out.println("move right " + currentTile.getID());
+					//System.out.println("move right " + currentTile.getID());
 					currentTileID = currentTile.getID();
 					path[numMoves] = true;
 				}
@@ -88,7 +88,7 @@ public class Problem15 {
 						flag = true;
 					}
 					currentTile = tiles.moveDown(currentTile);
-					System.out.println("move down " + currentTile.getID());
+					//System.out.println("move down " + currentTile.getID());
 					currentTileID = currentTile.getID();
 					path[numMoves] = false;
 				}
@@ -96,11 +96,11 @@ public class Problem15 {
 			
 			paths.add(path);
 			if(paths.size() > 2 && Arrays.equals(paths.get(paths.size()-1), paths.get(paths.size()-2))) {
-				System.out.println(paths.size());
+				//System.out.println(paths.size());
 				paths.remove(paths.size()-1);
 				exitFlag = true;				
 			}
-			System.out.println(paths.size());
+			//System.out.println(paths.size());
 		}
 
 		return paths.size();

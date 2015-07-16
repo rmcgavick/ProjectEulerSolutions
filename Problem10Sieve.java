@@ -46,7 +46,7 @@ public class Problem10Sieve {
 			}
 		}
 		
-		//put results to system.out in 10X0 blocks
+		/*put results to system.out in 10X0 blocks
 		for (int i = 0, j = 0; i <= limit; i++) {
 			if (sieve[i]) {
 				sum += i;
@@ -58,7 +58,8 @@ public class Problem10Sieve {
 					System.out.println();
 				}
 			}
-		}
+		}*/
+		
 		System.out.println("\n\nSum is: " + sum);
 		long endTime = System.nanoTime();
 		System.out.println("\nTook "+ ((endTime - startTime) / 1000000000.0) + " seconds");
